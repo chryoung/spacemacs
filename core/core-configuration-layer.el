@@ -337,7 +337,7 @@ The returned list has a `package-archives' compliant format."
                (concat
                 (if (and dotspacemacs-elpa-https
                          (not spacemacs-insecure))
-                    "https://"
+                    "http://"
                   "http://")
                 apath)))))
    archives))
@@ -2176,9 +2176,9 @@ Original code from dochang at https://github.com/dochang/elpa-clone"
   "Create an ELPA repository containing all packages supported by Spacemacs."
   (configuration-layer/make-all-packages 'no-discover)
   (let (package-archive-contents
-        (package-archives '(("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-                            ("org"   . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-                            ("gnu"   . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/"))))
+        (package-archives '(("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+                            ("org"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+                            ("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/"))))
     (package-refresh-contents)
     (package-read-all-archive-contents)
     (let* ((packages (configuration-layer//get-indexed-elpa-package-names))
