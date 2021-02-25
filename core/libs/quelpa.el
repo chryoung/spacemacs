@@ -143,7 +143,7 @@ If nil the update is disabled and the repo is only updated on
   :group 'quelpa
   :type 'boolean)
 
-(defcustom quelpa-melpa-repo-url "https://github.com/melpa/melpa.git"
+(defcustom quelpa-melpa-repo-url "https://github.com.cnpmjs.org/melpa/melpa.git"
   "The melpa git repository url."
   :group 'quelpa
   :type 'string)
